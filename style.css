@@ -1,0 +1,47 @@
+:root {
+  --night-bg-color: #222;
+  --night-color: #eee;
+  --bg-color: #eee;
+  --color: #222;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--color);
+  transition: 300ms all;
+}
+body.night {
+  background: var(--night-bg-color);
+  color: var(--night-color);
+}
+
+.mode-control {
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 20px;
+  background-color: var(--night-bg-color);
+  color: var(--night-color);
+}
+body.night .mode-control {
+  background: var(--bg-color);
+  color: var(--color);
+}
+
+.mode-control input {
+  position: absolute;
+  opacity: 0;
+}
+.mode-control span {
+  display: inline-block;
+}
+
+body.night .mode-control span {
+  display: none;
+}
+.mode-control span + span {
+  display: none;
+}
+
+body.night .mode-control span + span {
+  display: inline-block;
+}
